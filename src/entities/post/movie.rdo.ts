@@ -1,7 +1,7 @@
 
 export interface IMovieRDO {
     Response: string
-    totalResults: number
+    totalResults: string
     Search: IMovie[]
 }
 

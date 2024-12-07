@@ -12,6 +12,7 @@ export const OMDBApi = {
         const res = await OMDBApiInstance.get<IMovieRDO>("", {
             params: { apikey: API_KEY, s: title },
         });
+        
         return res.data
 
     },
