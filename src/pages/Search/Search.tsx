@@ -25,6 +25,7 @@ export const Search = () => {
                     <Button />
                 </form>
             </div>
+            <hr className="hr"/>
             <Feed movies={movies} />
         </>
     )

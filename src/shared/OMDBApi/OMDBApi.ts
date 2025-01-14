@@ -1,7 +1,7 @@
 import axios from "axios"
 import { IMovieRDO } from "../../entities/post/movie.rdo";
 
-const BASE_URL = "http://www.omdbapi.com/"
+const BASE_URL = "https://www.omdbapi.com/"
 
 const OMDBApiInstance = axios.create({ baseURL: BASE_URL });
 
