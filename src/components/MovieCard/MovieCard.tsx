@@ -8,7 +8,10 @@ export const MovieCard = ({Title, Year, Poster}: IMovie) => {
             <div className="title">
                 <h1>{Title}</h1>
                 <img src={img} />
-                <a>{Year}</a>
+                <div className="foot">
+                    <a>{Year}</a>
+                    <a className="heart"></a>
+                </div>
             </div>
         </div>
     )
