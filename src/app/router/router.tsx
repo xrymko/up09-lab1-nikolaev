@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { MoviePage } from "../../pages/MoviePage/MoviePage";
 import { Search } from "../../pages/Search/Search";
 
-import "./router.css"
+// import "./router.css"
 
 export const router = createBrowserRouter([
     {

@@ -8,10 +8,10 @@ interface IFeed {
 }
 export const Feed = ({ movies }: IFeed) => {
     return (
-        <div className="main">
+        <main className="feed">
             {movies.map((movie) => (
                 <MovieCard {...movie} />
             ))}
-        </div>
+        </main>
     )
 }

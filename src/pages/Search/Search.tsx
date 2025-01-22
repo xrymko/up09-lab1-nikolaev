@@ -12,21 +12,21 @@ export const Search = () => {
     const [movies, setMovies] = useState<IMovie[]>([])
     const handleSearh = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        const res = await OMDBApi.searchMovie(searchQuery)
+        const res = await OMDBApi.searchMovies(searchQuery)
         setMovies(res.Search)
     }
 
     return (
-        <>
-            <div className="search">
-                <h1>Ищи Bleeee</h1>
+        <div className="search">
+            <header className="search">
+                <h1>ПОиск</h1>
                 <form onSubmit={handleSearh} action="" >
                     <Input value={searchQuery} setValue={setSearchQuery} />
-                    <Button />
+                    <Button>кароч жмать</Button>
                 </form>
-            </div>
+            </header>
             <hr className="hr"/>
             <Feed movies={movies} />
-        </>
+        </div>
     )
 }

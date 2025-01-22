@@ -1,4 +1,8 @@
-.main{
-    width: 75%;
-    margin: 20px auto;
-}
+.feed {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+  }
