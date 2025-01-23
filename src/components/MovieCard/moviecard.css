@@ -36,3 +36,12 @@ img{
 h1 a{
     color: white;
 }
+
+@media (prefers-color-scheme: light) {
+    .heart{
+        background-color: gray;
+    }
+    h1 a{
+        color:#242424;
+    }
+  }
