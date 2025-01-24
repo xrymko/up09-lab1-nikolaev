@@ -4,13 +4,16 @@ import { useEffect, useState } from "react";
 import { IMoviePage } from "../../entities/post/movie.rdo";
 import img from "./../../assets/placeholder.jpg"
 import Button from "../../components/Button/Button";
-import { RotateLoader } from "react-spinners";
+import { PacmanLoader, RotateLoader } from "react-spinners";
 import "./MoviePage.css";
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 export function MoviePage() {
     const { id } = useParams();
     const [movie, setMovie] = useState<IMoviePage | undefined>(undefined)
     const navigate = useNavigate()
+
     
 
     useEffect(() => {
@@ -32,9 +35,8 @@ export function MoviePage() {
                 <Button onClick={()=>{
                     navigate(-1)
                 }}>Назад</Button>
-            </> : <RotateLoader />
+            </> : <PacmanLoader />
             }
-                
         </div>
 
     )
