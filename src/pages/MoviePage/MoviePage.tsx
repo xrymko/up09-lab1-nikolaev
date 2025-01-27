@@ -6,8 +6,6 @@ import img from "./../../assets/placeholder.jpg"
 import Button from "../../components/Button/Button";
 import { PacmanLoader, RotateLoader } from "react-spinners";
 import "./MoviePage.css";
-import { create } from "zustand";
-import { persist } from "zustand/middleware";
 
 export function MoviePage() {
     const { id } = useParams();

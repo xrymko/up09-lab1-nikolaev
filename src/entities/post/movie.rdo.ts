@@ -41,7 +41,7 @@ export interface IMoviePage {
     Response: string;
   }
   
-  export interface IMoviePageRating {
+  export interface Rating {
     Source: string;
     Value: string;
   }
