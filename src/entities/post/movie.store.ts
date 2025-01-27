@@ -1,12 +1,24 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { IMovie } from "./movie.rdo";
 
-export const useMovieStore = create(persist(
+
+interface IMovieStore {
+    likedMovies: IMovie[];
+    likeMovie: (movie: string) => void
+  }
+
+
+export const useMovieStore = create<IMovieStore>()(persist(
     (set) => ({
         likedMovies: [],
-        // likeMovie: (movie) => set((state) => ({ ??? })),
+        likeMovie: (movie) => set((state) => ({ 
+            likedMovies: [...state.likedMovies, movie],
+        })),
     }),
     {
         name: 'movie-store', // имя для хранения в localStorage
+        getStorage: () => localStorage;
     }
 ));
+
