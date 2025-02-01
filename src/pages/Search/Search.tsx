@@ -20,7 +20,7 @@ export const Search = () => {
         <div className="search">
             <header className="search">
                 <h1>ПОиск</h1>
-                <form onSubmit={handleSearh} action="" >
+                <form onSubmit={handleSearh} action="" className="form">
                     <Input value={searchQuery} setValue={setSearchQuery} />
                     <Button>кароч жмать</Button>
                 </form>

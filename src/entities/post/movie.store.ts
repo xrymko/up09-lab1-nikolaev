@@ -14,7 +14,7 @@ export const useMovieStore = create<IMovieStore>()(persist(
         likedMovies: [],
         likeMovie: (movie) => set((state) => ({ 
             likedMovies: [...state.likedMovies, movie],
-            
+        
         })),
     }),
     {
