@@ -5,7 +5,14 @@ import { Link } from "react-router-dom"
 import Button from "../Button/Button"
 import { useMovieStore } from "../../entities/post/movie.store"
 
-export const MovieCard = ({Title, Year, imdbID}: IMovie) => {
+export const MovieCard = (movie: IMovie) => {
+    const { toggleLike } = useMovieStore((state) => state)
+
+    const addLikeMovie = () => {
+        toggleLike(movie);
+    }
+
+    const { Title, Year, imdbID } = movie;
     return (
         <div className="movieCard">
             <div className="title">
@@ -13,7 +20,7 @@ export const MovieCard = ({Title, Year, imdbID}: IMovie) => {
                 <img src={img} />
                 <div className="foot">
                     <a>{Year}</a>
-                    <Button onClick={useMovieStore}></Button>
+                    <Button onClick={addLikeMovie}></Button>
                 </div>
             </div>
         </div>
